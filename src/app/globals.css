@@ -1,0 +1,169 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src:
+    url("/fonts/PPNeueMontreal-Book.woff2") format("woff2"),
+    url("/fonts/PPNeueMontreal-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src:
+    url("/fonts/PPNeueMontreal-Medium.woff2") format("woff2"),
+    url("/fonts/PPNeueMontreal-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src:
+    url("/fonts/PPNeueMontreal-Bold.woff2") format("woff2"),
+    url("/fonts/PPNeueMontreal-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src:
+    url("/fonts/PPNeueMontreal-Black.woff2") format("woff2"),
+    url("/fonts/PPNeueMontreal-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "PP Neue Montreal", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+  --font-display: "PP Neue Montreal", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "PP Neue Montreal", ui-sans-serif, system-ui, sans-serif;
+  --color-hood-green: #CCFF00;
+  --color-hood-cream: #F7F9F2;
+  --color-hood-terminal: #121212;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #CCFF00;
+  --primary-foreground: #000000;
+  --secondary: #F7F9F2;
+  --secondary-foreground: #000000;
+  --muted: #F7F9F2;
+  --muted-foreground: rgba(0, 0, 0, 0.55);
+  --accent: #CCFF00;
+  --accent-foreground: #000000;
+  --destructive: #FF3B30;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: rgba(0, 0, 0, 0.08);
+  --ring: #CCFF00;
+  --radius: 1rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #CCFF00;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #F7F9F2;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: rgba(0, 0, 0, 0.1);
+  --sidebar-ring: #CCFF00;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+
+  .bg-cream {
+    background-color: #F7F9F2;
+  }
+
+  .bg-hood-green {
+    background-color: #CCFF00;
+  }
+
+  .text-hood-green {
+    color: #CCFF00;
+  }
+
+  .btn-pill-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-black/85;
+  }
+
+  .btn-pill-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-black/15 bg-white px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-black/5;
+  }
+
+  .terminal-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .terminal-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}

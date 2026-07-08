@@ -1,0 +1,20 @@
+/** @deprecated import from @/lib/finding-formatter */
+export {
+  buildFormattedFindings,
+  buildKeyRisks,
+  buildTerminalFindings,
+  formatMarketStats,
+  formatSources,
+  isCheckDisplayable,
+  riskHeadline,
+  tokenTitle,
+  toTerminalFinding,
+  truncateAddress,
+  SEV_COLORS,
+  VERDICT_COLORS,
+  type FormattedFinding,
+  type FindingSeverity,
+  type FindingSource,
+  type TerminalFinding,
+  type TerminalSeverity,
+} from "@/lib/finding-formatter";

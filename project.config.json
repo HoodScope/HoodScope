@@ -1,0 +1,13 @@
+{
+  "name": "HoodScope",
+  "slug": "hoodscope",
+  "domain": "https://hoodscope.pro",
+  "github": {
+    "owner": "HoodScope",
+    "repo": "HoodScope"
+  },
+  "social": {
+    "x": "https://x.com/gohoodscope",
+    "github": "https://github.com/HoodScope"
+  }
+}
